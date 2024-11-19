@@ -7,6 +7,7 @@ import sys
 import os
 import importlib.util
 import re
+from collections import Counter
 
 module_path = '/workspaces/recipecosc445/protein_anaylsis.py'
 module_name = 'protein_analysis'
