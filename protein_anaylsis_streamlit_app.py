@@ -3,7 +3,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
-import protein_analysis  # Import your Python file as a module
+import protein_analysis.py  # Import your Python file as a module
 
 # Load dataset
 @st.cache
