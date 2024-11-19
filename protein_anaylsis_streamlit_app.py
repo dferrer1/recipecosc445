@@ -3,11 +3,17 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
-#import protein_analysis  # Import your Python file as a module
 import sys
 import os
-sys.path.append("/workspaces/recipecosc445/protein_anaylsis.py")
-import protein_analysis
+import importlib.util
+
+module_path = '/workspaces/recipecosc445/protein_anaylsis.py'
+module_name = 'protein_analysis'
+
+spec = importlib.util.spec_from_file_location(module_name, module_path)
+protein_analysis = importlib.util.module_from_spec(spec)
+sys.modules[module_name] = protein_analysis
+spec.loader.exec_module(protein_analysis)
 
 
 recipes_df = load_data()
