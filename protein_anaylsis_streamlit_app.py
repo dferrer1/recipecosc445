@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Integrate the uploaded Python file
-exec("""
+exec(
 import requests
 import pandas as pd
 from collections import Counter
@@ -275,7 +275,6 @@ def animal_vs_plant_protein(recipes_df):
     plt.ylabel("Average Protein (g)")
     plt.show()
 
-# Example calls for each analysis
 
 
 print("\nProtein Content by Category:")
@@ -399,7 +398,7 @@ def protein_in_low_carb(recipes_df):
     print(f"Average Protein in Low-Carb Recipes (<{low_carb_threshold}g carbs): {avg_protein:.2f}g")
 
 protein_in_low_carb(low_carb_recipes)
-""")
+)
 
 # Title of the Streamlit App
 st.title("Protein Analysis Dashboard")
