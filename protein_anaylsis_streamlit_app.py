@@ -15,6 +15,11 @@ protein_analysis = importlib.util.module_from_spec(spec)
 sys.modules[module_name] = protein_analysis
 spec.loader.exec_module(protein_analysis)
 
+@st.cache
+def load_data():
+    url = 'https://huggingface.co/datasets/Shengtao/recipe/resolve/main/recipe.csv'
+    return pd.read_csv(url)
+
 
 recipes_df = load_data()
 
