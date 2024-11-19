@@ -26,8 +26,18 @@ if menu == "Results":
     st.image('images/Top 10 Recipes Using x.png')
     st.image('images/Top 10 Recipes Using xy.png')
     st.image('images/Top 10 Recipes Using xyz.png')
+    st.image('images/JM1.png')
+    st.image('images/JM2.png')
+    st.image('images/JM3.png')
+    st.image('images/JM4.png')
+    st.image('images/JM5.png')
+    st.image('images/JM6.png')
+    st.image('images/JM7.png')
+    st.image('images/SA1.png')
+    st.image('images/SA2.png')
+    st.image('images/SA3.png')
+    st.image('images/SA4.png')
 
-   
 elif menu == "About":
     
     file_path = 'frontend/about.txt'
