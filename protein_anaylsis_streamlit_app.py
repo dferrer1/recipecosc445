@@ -6,7 +6,7 @@ import pandas as pd
 #import protein_analysis  # Import your Python file as a module
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append("/workspaces/recipecosc445/protein_anaylsis.py")
 import protein_analysis
 
 
