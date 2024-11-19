@@ -3,13 +3,12 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
+from collections import Counter
+import re
+import requests
 
 # Integrate the uploaded Python file
 exec(
-import pandas as pd
-from collections import Counter
-import re
-import matplotlib.pyplot as plt
 
 recipes_df = pd.read_csv('https://huggingface.co/datasets/Shengtao/recipe/resolve/main/recipe.csv')
 
