@@ -6,6 +6,7 @@ import pandas as pd
 import sys
 import os
 import importlib.util
+import re
 
 module_path = '/workspaces/recipecosc445/protein_anaylsis.py'
 module_name = 'protein_analysis'
