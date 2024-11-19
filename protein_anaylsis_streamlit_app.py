@@ -6,7 +6,6 @@ import pandas as pd
 
 # Integrate the uploaded Python file
 exec(
-import requests
 import pandas as pd
 from collections import Counter
 import re
