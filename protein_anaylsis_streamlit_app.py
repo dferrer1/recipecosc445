@@ -3,13 +3,12 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
-import protein_analysis.py  # Import your Python file as a module
+#import protein_analysis  # Import your Python file as a module
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+import protein_analysis
 
-# Load dataset
-@st.cache
-def load_data():
-    url = 'https://huggingface.co/datasets/Shengtao/recipe/resolve/main/recipe.csv'
-    return pd.read_csv(url)
 
 recipes_df = load_data()
 
