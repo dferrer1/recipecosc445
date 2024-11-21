@@ -1,7 +1,17 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
+import numpy as np
 matplotlib.use('WebAgg') # Uncomment when using plots remotely or with wsl
+
+
+def get_colors(color_num):
+    cmap = plt.get_cmap('viridis')
+    spread = np.array(np.arange(0,len(cmap.colors),len(cmap.colors)/color_num),dtype=np.int64)
+    colors = []
+    for val in spread:
+        colors.append(cmap(val))
+    return colors
 
 #
 df = pd.read_csv("hf://datasets/AkashPS11/recipes_data_food.com/recipes.csv")
@@ -54,15 +64,17 @@ print(df2.loc[7496,'ingredients'])
 from collections import Counter
 n = 15
 top_n_ingredients = dict(Counter(all_ingredients).most_common(n))
-print(top_n_ingredients)
+print(top_n_ingredients)                                                                                                                                                                                                                                                 
 
 # Plot the top n ingredients
 fig = plt.figure(f"Top {n} Most Commonly Used Ingredients")
+plt.suptitle(f"Top {n} Most Commonly Used Ingredients")
 plt.subplot(1,1,1)
-plt.barh(list(top_n_ingredients.keys()),list(top_n_ingredients.values()))
+plt.barh(list(top_n_ingredients.keys()),list(top_n_ingredients.values()),color=get_colors(n))
 # plt.title(f"Top {n} Most Commonly Used Ingredients")
 # plt.xlabel("# of Recipes With Ingredient")
 plt.tight_layout()
+plt.savefig(f"images/Top {n} Most Commonly Used Ingredients")
 
 # Grade recipes by how many of the most common ingredients they use
 recipe_scores = {}
@@ -78,11 +90,14 @@ top_n_recipes = dict(Counter(recipe_scores).most_common(n))
 
 # Plot the top n that use the most of the most common ingredients
 fig = plt.figure(f"Top {n} Recipes Using Most Common Ingredients")
+fig.suptitle(f"Top {n} Recipes Using Most Common Ingredients")
 plt.subplot(1,1,1)
-plt.barh(list(top_n_recipes.keys()),list(top_n_recipes.values()))
+plt.viridis()
+plt.barh(list(top_n_recipes.keys()),list(top_n_recipes.values()),color=get_colors(n))
 # plt.title(f"Top {n} Recipes Using Most Common Ingredients")
 # plt.xlabel("# of Common Ingredients Used in Recipe")
 plt.tight_layout()
+plt.savefig(f"images/Top {n} Recipes Using Most Common Ingredients")
 # plt.text(0.1, 0.5, 'Left-aligned text', horizontalalignment='left')
 # import textwrap
 # labels = [textwrap.fill(label, 10) for label in list(top_n_recipes.keys())]
@@ -118,10 +133,13 @@ top_n_recipes_excluding_x = dict(Counter(recipe_scores_excluding_x).most_common(
 
 # Plot the top n that use the most of the most common ingredients
 fig = plt.figure(f"Top {n} Using Most Common Ingredients\n(Excluding {x})")
+fig.suptitle(f"Top {n} Using Most Common Ingredients (Excluding \n{x})")
 plt.subplot(1,1,1)
-plt.barh(list(top_n_recipes.keys()),list(top_n_recipes.values()))
+plt.viridis()
+plt.barh(list(top_n_recipes_excluding_x.keys()),list(top_n_recipes_excluding_x.values()),color=get_colors(n))
 # plt.title(f"Top {n} Using Most Common Ingredients (Excluding {x})")
 plt.tight_layout()
+plt.savefig(f"images/Top {n} Recipes Excluding xyz")
 
 print()
 print()
@@ -145,12 +163,16 @@ top_n_recipes_using_x = dict(Counter(recipes_using_x).most_common(n))
 
 # Plot the top n that use the most of the most common ingredients
 plt.figure(f"Top {n} Recipes Using {x} (Out of 5 Stars)")
+plt.suptitle(f"Top {n} Recipes Using {x} (Out of 5 Stars)")
 plt.subplot(1,1,1)
 # plt.tight_layout()
 # plt.yticks(rotation=45, ha='right')
-plt.barh(list(top_n_recipes_using_x.keys()),list(top_n_recipes_using_x.values()))
+plt.viridis()
+plt.barh(list(top_n_recipes_using_x.keys()),list(top_n_recipes_using_x.values()),color=get_colors(n))
 # plt.title(f"Top {n} Recipes (Using {x})")
 plt.tight_layout()
+plt.savefig(f"images/Top {n} Recipes Using x")
+
 print()
 print()
 print("--------------------------------------------------------------------------")
@@ -173,10 +195,13 @@ top_n_recipes_using_x = dict(Counter(recipes_using_x).most_common(n))
 
 # Plot the top n that use the most of the most common ingredients
 fig = plt.figure(f"Top {n} Recipes Using {x} and {y} (Out of 5 Stars)")
+plt.suptitle(f"Top {n} Recipes Using {x} and {y} (Out of 5 Stars)")
 plt.subplot(1,1,1)
-plt.barh(list(top_n_recipes_using_x.keys()),list(top_n_recipes_using_x.values()))
+plt.viridis()
+plt.barh(list(top_n_recipes_using_x.keys()),list(top_n_recipes_using_x.values()),color=get_colors(n))
 # plt.title(f"Top {n} Recipes (Using {x} and {y})")
 plt.tight_layout()
+plt.savefig(f"images/Top {n} Recipes Using xy")
 
 print()
 print()
@@ -203,10 +228,13 @@ top_n_recipes_using_x = dict(Counter(recipes_using_x).most_common(n))
 
 # Plot the top n that use the most of the most common ingredients
 fig = plt.figure(f"Top {n} Recipes Using {x}, {y}, and {z} (Out of 5 Stars)")
+plt.suptitle(f"Top {n} Recipes Using {x}, {y}, and {z} (Out of 5 Stars)")
 plt.subplot(1,1,1)
-plt.barh(list(top_n_recipes_using_x.keys()),list(top_n_recipes_using_x.values()))
+plt.viridis()
+plt.barh(list(top_n_recipes_using_x.keys()),list(top_n_recipes_using_x.values()),color=get_colors(n))
 # plt.title(f"Top {n} Recipes (Using {x}, {y}, and {z})")
 plt.tight_layout()
+plt.savefig(f"images/Top {n} Recipes Using xyz")
 
 print()
 print()
