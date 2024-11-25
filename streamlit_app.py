@@ -63,8 +63,6 @@ if menu == "Results":
     st.image('images/JM7.png')
     
     st.write("Scatterplot and a heatmap results.")
-    
-    st.code(code, language='python')  
     st.image('images/SA1.png')
     st.image('images/SA2.png')
 
