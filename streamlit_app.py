@@ -72,9 +72,6 @@ if menu == "Results":
     
     st.image('images/SA3.png')
 
-
-
-    st.code(code, language='python') 
     st.image('images/SA4.png')
 
 elif menu == "About":
