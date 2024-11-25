@@ -1,8 +1,17 @@
-# 🎈 Blank app template
+# Recipe Ingredients Analysis
 
-A simple Streamlit app template for you to modify!
+Team Members
+ - Diego Ferrer
+ - Seungwoo An
+ - Jackson Muncy
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+ The objective of this project is to thoroughly analyze a dataset containing ingredients from over 1 million online recipes sourced from Hugging Face. The project aims to:
+
+ - Identify the most commonly used ingredients across various recipes.
+ - Categorize recipes by cuisine type.
+ - Uncover correlations between ingredients, caloric values, and nutritional attributes such as protein content.
+ - Provide insights into dietary trends, ingredient popularity, and the cultural significance of certain ingredients.
+ - This analysis will use Python for data processing and aims to benefit culinary professionals, food bloggers, home cooks, and grocery stores.
 
 ### How to run it on your own machine
 
