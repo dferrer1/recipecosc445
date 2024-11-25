@@ -34,7 +34,7 @@ if menu == "Results":
     st.image('images/JM6.png')
     st.image('images/JM7.png')
     
-    st.write("Here's a scatterplot and a heatmap that could result from the analysis.")
+    st.write("Scatterplot and a heatmap results.")
     code = """
     !pip install datasets pandas matplotlib seaborn
 
@@ -75,7 +75,7 @@ if menu == "Results":
     plt.title("Correlation Heatmap")
     plt.show()
     """
-    st.code(code, language='python')  # Use 'language' for syntax highlighting
+    st.code(code, language='python')  
     st.image('images/SA1.png')
     st.image('images/SA2.png')
 
@@ -102,7 +102,7 @@ if menu == "Results":
     plt.show()
     """
 
-    st.code(code, language='python')  # Use 'language' for syntax highlighting
+    st.code(code, language='python')  
     st.image('images/SA3.png')
 
 
@@ -130,7 +130,7 @@ if menu == "Results":
     plt.tight_layout()
     plt.show()
     """
-    st.code(code, language='python')  # Use 'language' for syntax highlighting
+    st.code(code, language='python') 
     st.image('images/SA4.png')
 
 elif menu == "About":
