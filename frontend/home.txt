@@ -1,11 +1,9 @@
 # Recipe Ingredient Analysis
+
 The objective of this project is to thoroughly analyze a dataset containing ingredients from over 1 million online recipes sourced from Huggingface. 
 This project aims to identify the most commonly used ingredients across various recipes and categorize them by cuisine type. 
 By leveraging Python for data processing and analysis, we seek to provide insights into dietary trends, ingredient popularity, and the cultural significance of certain ingredients. 
 Moreover, by examining the relationships between ingredients and these recipe characteristics, we hope to uncover useful correlations, particularly the link between ingredient combinations and caloric values.
-=======
-Recipe Ingredients Analysis
-
 Objective
 
 The objective of this project is to thoroughly analyze a dataset containing ingredients from over 1 million online recipes sourced from Hugging Face. The project aims to:
