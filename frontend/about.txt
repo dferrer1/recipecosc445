@@ -1,3 +1,15 @@
+# Data
+The dataset used in this project was found on HuggingFace and is sourced from Food.com and contains over 1 million recipes. 
+Each recipe is accompanied by various attributes such as cook time, prep time, total time, ingredient lists, and nutritional information like calorie count. 
+Our analysis will focus on the following variables: 
+- Cook Time: The time required to cook each recipe.
+- Prep Time: The time required to prepare ingredients.
+- Total Time: The sum of prep and cook times.
+- Ingredients: The list of ingredients used in each recipe.
+- Calories: Nutritional information of each recipe.
+
+These variables will help us analyze the ingredients used across different recipes, and group recipes based on similar attributes, and allow us to search recipes by specific criteria such as cook time, ingredients, or calories.
+=======
 Team Members
 
  - Diego Ferrer: Analysis of ingredient usage trends and identification of common ingredients.
