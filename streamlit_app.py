@@ -69,9 +69,7 @@ if menu == "Results":
     st.write("""
              ## Calorie Analysis
              """)
-   
-
-    st.code(code, language='python')  
+    
     st.image('images/SA3.png')
 
 
