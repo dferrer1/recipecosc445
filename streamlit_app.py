@@ -23,7 +23,7 @@ if menu == "Results":
     st.write("""
              ## Common Ingredient Analysis
              The main question that was investigated in this part of the project was "What are the ingredients that are used most commonly between recipes?"
-             The answer to this question is interested for a number of reasons. One is that knowing what ingredients are most common can help beginning home cooks,
+             The answer to this question is interesting for a number of reasons. One is that knowing what ingredients are most common can help beginning home cooks,
              that want to stick to a budget but also practice several recipes, choose their ingredients more efficiently. Through this analysis, we were able to find
              15 ingredients that were used most commonly. Fittingly, the most commonly used ingredient was salt, which was used in almost 10000 recipes.
              """)
@@ -121,12 +121,12 @@ if menu == "Results":
     plt.show()
     """
     st.code(code, language='python')  # Use 'language' for syntax highlighting
-    st.write("""
-             ## Calorie Analysis
-             """)
     st.image('images/SA1.png')
     st.image('images/SA2.png')
 
+    st.write("""
+             ## Calorie Analysis
+             """)
     code = """
     # Step 1: Install the necessary library (if not already installed)
     !pip install datasets matplotlib
