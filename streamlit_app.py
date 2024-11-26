@@ -17,9 +17,7 @@ if menu == "Home":
 
 if menu == "Results":
     st.title("Results")
-    st.write(
-        "This page is dedicated to showcasing our results and charts."
-    )
+    
     st.write("""
              ## Common Ingredient Analysis
              The main question that was investigated in this part of the project was "What are the ingredients that are used most commonly between recipes?"
@@ -62,16 +60,33 @@ if menu == "Results":
     st.image('images/JM6.png')
     st.image('images/JM7.png')
     
-    st.write("Scatterplot and a heatmap results.")
+    st.write("""
+             ## Calories Analysis
+             We analyzed the correlation between the ingredients and calories.
+             The following scatterplot and heatmap show the correlation between the number of ingredients and calories. 
+             We were able to conclude that most recipes in our dataset had 50~100 ingredients. 
+             We also found out that among the recipes that are very high in calories, there were a few outliers not correspond to many ingredients. 
+             This suggests that the calorie content is not directly proportional to the number of ingredients. 
+             The correlation between calories and ingredients number is 20%, meaning there is not much correlation between the number of ingredients and calories. 
+             """)    
     st.image('images/SA1.png')
     st.image('images/SA2.png')
 
     st.write("""
-             ## Calorie Analysis
+             ### Recipes with the highest calories 
+             To find if recipes with high calories have ingredients used in common, 
+             we decided to search for the top recipes with the highest calories.  
              """)
     
     st.image('images/SA3.png')
-
+    
+    st.write("""
+             ### Ingredients with the highest calories 
+             After getting the data of the top 10 recipes with the highest calories, 
+             we searched for common ingredients used among the high-calorie recipes. 
+             As a result, we were able to conclude that butter, minced garlic, sesame oil, and other common ingredients like salt were commonly used in the recipes. 
+             There were some calorie-dense ingredients like butter and sesame oil, but some ingredients like minced garlic were not really calorie-dense. 
+             """)
     st.image('images/SA4.png')
 
 elif menu == "About":
