@@ -52,11 +52,14 @@ if menu == "Results":
     st.write("""
              ## Protein Analysis
              """)
+    st.write("To start I decided to look into the meats that showed up most often.")
     st.image('images/JM1.png')
     st.image('images/JM2.png')
+    st.write("I think this result is interesting, I had assumed rice would have been the clear cut favorite and instead corn is.")
     st.image('images/JM3.png')
     st.image('images/JM4.png')
     st.image('images/JM5.png')
+    st.write("To no ones surprise, animal based proteins have more protein than plant based.")
     st.image('images/JM6.png')
     st.image('images/JM7.png')
     
